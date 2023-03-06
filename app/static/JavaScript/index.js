@@ -24,18 +24,54 @@ clearResult = () => {
     document.getElementById("result").value = "";
 }
 
-calculateResult = () => {
+
+calculateResult = async () => {
     const equation = document.getElementById("result").value;
-    fetch('/calculate', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-right',
+        iconColor: 'white',
+        customClass: {
+            popup: 'colored-toast'
         },
-        body: JSON.stringify({
-            equation: equation
-        })
-    }).then(response => response.json())
-        .then(data => {
-            document.getElementById("result").value = data.result;
-        })
-}
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true
+    })
+    await Toast.fire({
+        icon: 'info',
+        title: 'Calculating...',
+        didOpen: () => {
+            Toast.showLoading();
+            fetch('/calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    equation: equation
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'Invalid Equation') {
+                        Toast.fire({
+                            icon: 'error',
+                            title: 'Invalid Equation!',
+                        });
+                    } else {
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Result of ' + equation + ' is ' + data.result,
+                        });
+                    }
+                })
+                .catch(error => {
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'Something went wrong!'
+                    });
+                });
+        }
+    })
+};
