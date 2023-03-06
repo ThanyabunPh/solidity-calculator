@@ -9,4 +9,3 @@ class config:
     ABI_ADDRESS = ABI_FILE['ABI_ADDRESS']
 
     ABI = ABI_FILE['ABI']
-
