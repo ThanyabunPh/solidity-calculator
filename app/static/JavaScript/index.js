@@ -29,13 +29,13 @@ calculateResult = async () => {
     const equation = document.getElementById("result").value;
     const Toast = Swal.mixin({
         toast: true,
-        position: 'top-right',
+        position: 'top-end',
         iconColor: 'white',
         customClass: {
             popup: 'colored-toast'
         },
         showConfirmButton: false,
-        timer: 1500,
+        timer: 3000,
         timerProgressBar: true
     })
     await Toast.fire({
@@ -64,6 +64,7 @@ calculateResult = async () => {
                             icon: 'success',
                             title: 'Result of ' + equation + ' is ' + data.result,
                         });
+                        document.getElementById("result").value = data.result;
                     }
                 })
                 .catch(error => {
