@@ -5,7 +5,7 @@ By Thanyabun 63104509 || Chainarong 63102156
 ## Installation
 
 ```bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
