@@ -4,8 +4,6 @@ By Thanyabun 63104509 || Chainarong 63102156
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
 ```bash
 pip install -r requirement.txt
 ```
