@@ -20,19 +20,6 @@ addOperator = (value) => {
 }
 
 
-addDecimal = (value) => {
-    const result = document.getElementById("result");
-    const lastChar = result.value[result.value.length - 1];
-
-    // check if the last character is an operator or if the input is empty
-    if (result.value === '' || lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') {
-        return;
-    } else {
-        // if the last character is not an operator and the input is not empty, simply add the new value to the result
-        result.value += value;
-    }
-}
-
 clearResult = () => {
     document.getElementById("result").value = "";
 }
