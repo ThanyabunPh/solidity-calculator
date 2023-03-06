@@ -1,0 +1,1 @@
+from contract.sContract_Bridge import contractMethod

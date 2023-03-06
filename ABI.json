@@ -1,0 +1,101 @@
+{
+    "ABI": [
+        {
+            "inputs": [
+                {
+                    "internalType": "int256",
+                    "name": "num1",
+                    "type": "int256"
+                },
+                {
+                    "internalType": "int256",
+                    "name": "num2",
+                    "type": "int256"
+                }
+            ],
+            "name": "add",
+            "outputs": [
+                {
+                    "internalType": "int256",
+                    "name": "",
+                    "type": "int256"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "int256",
+                    "name": "num1",
+                    "type": "int256"
+                },
+                {
+                    "internalType": "int256",
+                    "name": "num2",
+                    "type": "int256"
+                }
+            ],
+            "name": "div",
+            "outputs": [
+                {
+                    "internalType": "int256",
+                    "name": "",
+                    "type": "int256"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "int256",
+                    "name": "num1",
+                    "type": "int256"
+                },
+                {
+                    "internalType": "int256",
+                    "name": "num2",
+                    "type": "int256"
+                }
+            ],
+            "name": "mul",
+            "outputs": [
+                {
+                    "internalType": "int256",
+                    "name": "",
+                    "type": "int256"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "int256",
+                    "name": "num1",
+                    "type": "int256"
+                },
+                {
+                    "internalType": "int256",
+                    "name": "num2",
+                    "type": "int256"
+                }
+            ],
+            "name": "sub",
+            "outputs": [
+                {
+                    "internalType": "int256",
+                    "name": "",
+                    "type": "int256"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        }
+    ],
+    "ABI_ADDRESS": "0x3c4a7DAc779cec7d69116C0E3375376e98C9B04F"
+}
